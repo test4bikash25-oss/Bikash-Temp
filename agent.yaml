@@ -29,6 +29,7 @@ tools:
 - youtube-Bikash
 - Notion
 - ARXIV-Bikash
+- openapi-todo_task-getTodos
 tool_configs:
 - tool_name: instagram-Bikash
   tool_source: composio
@@ -190,6 +191,14 @@ tool_configs:
   provider_uuid: 695e5269ab10296d9a5bc549
   credential_id: 722886e6-2a8d-4f94-9fe8-a49e55babf96
   persist_auth: true
+- tool_name: openapi-todo_task-getTodos
+  tool_source: openapi
+  action_names:
+  - Get all todo task
+  server_id: ''
+  provider_uuid: ''
+  credential_id: ''
+  persist_auth: true
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
   name: 'Tweet Agent '
@@ -253,7 +262,8 @@ tool_usage_description: "{\n  \"instagram-Bikash\": [\n    \"INSTAGRAM_CREATE_CA
   ,\n    \"notion-convert-to-meetings-database\",\n    \"notion-create-meeting-note\"\
   ,\n    \"notion-get-setup-guide\"\n  ],\n  \"ARXIV-Bikash\": [\n    \"ARXIV__SEARCH_PAPERS\"\
   ,\n    \"ARXIV__GET_PAPER_METADATA\",\n    \"ARXIV__DOWNLOAD_PAPER\",\n    \"ARXIV__GET_CATEGORIES\"\
-  ,\n    \"ARXIV__GET_DAILY_UPDATES\"\n  ]\n}"
+  ,\n    \"ARXIV__GET_DAILY_UPDATES\"\n  ],\n  \"openapi-todo_task-getTodos\": [\n\
+  \    \"Get all todo task\"\n  ]\n}"
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
