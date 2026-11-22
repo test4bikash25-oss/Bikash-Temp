@@ -26,6 +26,7 @@ features:
     rag_url: https://rag.staging.studio.lyzr.ai
 tools:
 - instagram-Bikash
+- youtube-Bikash
 tool_configs:
 - tool_name: instagram-Bikash
   tool_source: composio
@@ -70,6 +71,27 @@ tool_configs:
   provider_uuid: 6a44c2d5d90e634e01e5af99
   credential_id: e3c4705b-3c60-4eb2-8d0b-d1874b45f686
   persist_auth: true
+- tool_name: youtube-Bikash
+  tool_source: composio
+  action_names:
+  - YOUTUBE_GET_CHANNEL_ACTIVITIES
+  - YOUTUBE_GET_CHANNEL_ID_BY_HANDLE
+  - YOUTUBE_GET_CHANNEL_STATISTICS
+  - YOUTUBE_LIST_CAPTION_TRACK
+  - YOUTUBE_LIST_CHANNEL_VIDEOS
+  - YOUTUBE_LIST_USER_PLAYLISTS
+  - YOUTUBE_LIST_USER_SUBSCRIPTIONS
+  - YOUTUBE_LOAD_CAPTIONS
+  - YOUTUBE_SEARCH_YOU_TUBE
+  - YOUTUBE_SUBSCRIBE_CHANNEL
+  - YOUTUBE_UPDATE_THUMBNAIL
+  - YOUTUBE_UPDATE_VIDEO
+  - YOUTUBE_UPLOAD_VIDEO
+  - YOUTUBE_VIDEO_DETAILS
+  server_id: ''
+  provider_uuid: 6979cdc148b4a6ba95dea64c
+  credential_id: 1b9885ce-e08b-4683-bf00-bb40e73c6ca6
+  persist_auth: true
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
   name: 'Tweet Agent '
@@ -94,7 +116,14 @@ tool_usage_description: "{\n  \"instagram-Bikash\": [\n    \"INSTAGRAM_CREATE_CA
   \  \"INSTAGRAM_POST_IG_MEDIA_COMMENTS\",\n    \"INSTAGRAM_POST_IG_USER_MEDIA\",\n\
   \    \"INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH\",\n    \"INSTAGRAM_POST_IG_USER_MENTIONS\"\
   ,\n    \"INSTAGRAM_REPLY_TO_COMMENT\",\n    \"INSTAGRAM_SEND_IMAGE\",\n    \"INSTAGRAM_SEND_TEXT_MESSAGE\"\
-  ,\n    \"INSTAGRAM_UPDATE_MESSENGER_PROFILE\"\n  ]\n}"
+  ,\n    \"INSTAGRAM_UPDATE_MESSENGER_PROFILE\"\n  ],\n  \"youtube-Bikash\": [\n \
+  \   \"YOUTUBE_GET_CHANNEL_ACTIVITIES\",\n    \"YOUTUBE_GET_CHANNEL_ID_BY_HANDLE\"\
+  ,\n    \"YOUTUBE_GET_CHANNEL_STATISTICS\",\n    \"YOUTUBE_LIST_CAPTION_TRACK\",\n\
+  \    \"YOUTUBE_LIST_CHANNEL_VIDEOS\",\n    \"YOUTUBE_LIST_USER_PLAYLISTS\",\n  \
+  \  \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n    \"YOUTUBE_LOAD_CAPTIONS\",\n    \"\
+  YOUTUBE_SEARCH_YOU_TUBE\",\n    \"YOUTUBE_SUBSCRIBE_CHANNEL\",\n    \"YOUTUBE_UPDATE_THUMBNAIL\"\
+  ,\n    \"YOUTUBE_UPDATE_VIDEO\",\n    \"YOUTUBE_UPLOAD_VIDEO\",\n    \"YOUTUBE_VIDEO_DETAILS\"\
+  \n  ]\n}"
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
