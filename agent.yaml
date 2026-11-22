@@ -27,6 +27,8 @@ features:
 tools:
 - instagram-Bikash
 - youtube-Bikash
+- Notion
+- ARXIV-Bikash
 tool_configs:
 - tool_name: instagram-Bikash
   tool_source: composio
@@ -92,6 +94,102 @@ tool_configs:
   provider_uuid: 6979cdc148b4a6ba95dea64c
   credential_id: 1b9885ce-e08b-4683-bf00-bb40e73c6ca6
   persist_auth: true
+- tool_name: Notion
+  tool_source: mcp
+  action_names:
+  - notion-search
+  - notion-memory-search
+  - notion-get-tool-access
+  - notion-fetch
+  - notion-create-attachment
+  - notion-create-file-upload
+  - notion-download-attachment
+  - notion-get-file-download-urls
+  - notion-create-pages
+  - notion-update-page
+  - notion-delete-pages
+  - notion-delete-databases
+  - notion-restore-pages
+  - notion-convert-page-to-skill
+  - notion-upload-skill
+  - notion-download-skill
+  - notion-get-enabled-skills
+  - notion-update-skill-settings
+  - notion-complete-mcp-setup
+  - notion-move-pages
+  - notion-duplicate-page
+  - notion-create-database
+  - notion-create-folder
+  - notion-update-folder
+  - notion-update-data-source
+  - notion-create-comment
+  - notion-get-comments
+  - notion-update-comment
+  - notion-delete-comment
+  - notion-set-discussion-resolved
+  - notion-set-comment-reaction
+  - notion-create-suggested-edit
+  - notion-get-suggested-edit
+  - notion-resolve-suggested-edit
+  - notion-get-async-task
+  - notion-get-teams
+  - notion-get-groups
+  - notion-get-users
+  - notion-query-data-sources
+  - notion-query-multiple-data-sources
+  - notion-query-meeting-notes
+  - notion-list-private-pages
+  - notion-list-shared-pages
+  - notion-list-favorite-pages
+  - notion-list-recent-pages
+  - notion-search-agents
+  - notion-search-sessions
+  - notion-query-sessions
+  - notion-spawn-session
+  - notion-get-session-status
+  - notion-wait-session
+  - notion-stop-session
+  - notion-send-message-to-session
+  - notion-list-session-events
+  - notion-read-session-event
+  - notion-create-view
+  - notion-update-view
+  - notion-get-version-changes
+  - notion-view-version
+  - notion-restore-version
+  - notion-list-page-backlinks
+  - notion-get-sidebar-tabs
+  - notion-update-sidebar-tabs
+  - notion-update-page-favorites
+  - notion-calendar-list-calendars
+  - notion-calendar-list-events
+  - notion-calendar-list-coworkers-events
+  - notion-calendar-list-calendar-resources
+  - notion-calendar-list-contacts
+  - notion-calendar-create-events
+  - notion-calendar-update-events
+  - notion-calendar-cancel-events
+  - notion-get-self
+  - notion-link-meeting-note-to-calendar-event
+  - notion-convert-to-meetings-database
+  - notion-create-meeting-note
+  - notion-get-setup-guide
+  server_id: 6b02f6e656a0dca1e1a954f7
+  provider_uuid: ''
+  credential_id: ''
+  persist_auth: true
+- tool_name: ARXIV-Bikash
+  tool_source: aci
+  action_names:
+  - ARXIV__SEARCH_PAPERS
+  - ARXIV__GET_PAPER_METADATA
+  - ARXIV__DOWNLOAD_PAPER
+  - ARXIV__GET_CATEGORIES
+  - ARXIV__GET_DAILY_UPDATES
+  server_id: ''
+  provider_uuid: 695e5269ab10296d9a5bc549
+  credential_id: 722886e6-2a8d-4f94-9fe8-a49e55babf96
+  persist_auth: true
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
   name: 'Tweet Agent '
@@ -123,7 +221,39 @@ tool_usage_description: "{\n  \"instagram-Bikash\": [\n    \"INSTAGRAM_CREATE_CA
   \  \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n    \"YOUTUBE_LOAD_CAPTIONS\",\n    \"\
   YOUTUBE_SEARCH_YOU_TUBE\",\n    \"YOUTUBE_SUBSCRIBE_CHANNEL\",\n    \"YOUTUBE_UPDATE_THUMBNAIL\"\
   ,\n    \"YOUTUBE_UPDATE_VIDEO\",\n    \"YOUTUBE_UPLOAD_VIDEO\",\n    \"YOUTUBE_VIDEO_DETAILS\"\
-  \n  ]\n}"
+  \n  ],\n  \"Notion\": [\n    \"notion-search\",\n    \"notion-memory-search\",\n\
+  \    \"notion-get-tool-access\",\n    \"notion-fetch\",\n    \"notion-create-attachment\"\
+  ,\n    \"notion-create-file-upload\",\n    \"notion-download-attachment\",\n   \
+  \ \"notion-get-file-download-urls\",\n    \"notion-create-pages\",\n    \"notion-update-page\"\
+  ,\n    \"notion-delete-pages\",\n    \"notion-delete-databases\",\n    \"notion-restore-pages\"\
+  ,\n    \"notion-convert-page-to-skill\",\n    \"notion-upload-skill\",\n    \"notion-download-skill\"\
+  ,\n    \"notion-get-enabled-skills\",\n    \"notion-update-skill-settings\",\n \
+  \   \"notion-complete-mcp-setup\",\n    \"notion-move-pages\",\n    \"notion-duplicate-page\"\
+  ,\n    \"notion-create-database\",\n    \"notion-create-folder\",\n    \"notion-update-folder\"\
+  ,\n    \"notion-update-data-source\",\n    \"notion-create-comment\",\n    \"notion-get-comments\"\
+  ,\n    \"notion-update-comment\",\n    \"notion-delete-comment\",\n    \"notion-set-discussion-resolved\"\
+  ,\n    \"notion-set-comment-reaction\",\n    \"notion-create-suggested-edit\",\n\
+  \    \"notion-get-suggested-edit\",\n    \"notion-resolve-suggested-edit\",\n  \
+  \  \"notion-get-async-task\",\n    \"notion-get-teams\",\n    \"notion-get-groups\"\
+  ,\n    \"notion-get-users\",\n    \"notion-query-data-sources\",\n    \"notion-query-multiple-data-sources\"\
+  ,\n    \"notion-query-meeting-notes\",\n    \"notion-list-private-pages\",\n   \
+  \ \"notion-list-shared-pages\",\n    \"notion-list-favorite-pages\",\n    \"notion-list-recent-pages\"\
+  ,\n    \"notion-search-agents\",\n    \"notion-search-sessions\",\n    \"notion-query-sessions\"\
+  ,\n    \"notion-spawn-session\",\n    \"notion-get-session-status\",\n    \"notion-wait-session\"\
+  ,\n    \"notion-stop-session\",\n    \"notion-send-message-to-session\",\n    \"\
+  notion-list-session-events\",\n    \"notion-read-session-event\",\n    \"notion-create-view\"\
+  ,\n    \"notion-update-view\",\n    \"notion-get-version-changes\",\n    \"notion-view-version\"\
+  ,\n    \"notion-restore-version\",\n    \"notion-list-page-backlinks\",\n    \"\
+  notion-get-sidebar-tabs\",\n    \"notion-update-sidebar-tabs\",\n    \"notion-update-page-favorites\"\
+  ,\n    \"notion-calendar-list-calendars\",\n    \"notion-calendar-list-events\"\
+  ,\n    \"notion-calendar-list-coworkers-events\",\n    \"notion-calendar-list-calendar-resources\"\
+  ,\n    \"notion-calendar-list-contacts\",\n    \"notion-calendar-create-events\"\
+  ,\n    \"notion-calendar-update-events\",\n    \"notion-calendar-cancel-events\"\
+  ,\n    \"notion-get-self\",\n    \"notion-link-meeting-note-to-calendar-event\"\
+  ,\n    \"notion-convert-to-meetings-database\",\n    \"notion-create-meeting-note\"\
+  ,\n    \"notion-get-setup-guide\"\n  ],\n  \"ARXIV-Bikash\": [\n    \"ARXIV__SEARCH_PAPERS\"\
+  ,\n    \"ARXIV__GET_PAPER_METADATA\",\n    \"ARXIV__DOWNLOAD_PAPER\",\n    \"ARXIV__GET_CATEGORIES\"\
+  ,\n    \"ARXIV__GET_DAILY_UPDATES\"\n  ]\n}"
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
