@@ -15,15 +15,6 @@ features:
     max_messages_context_count: 10
     memory_credential_id: 5356d0c3-2547-4a24-9036-55db00b6033d
     memory_id: ''
-- type: DATA_QUERY
-  priority: 0
-  config:
-    docs_rag_id: 6b02d1626d14d7fb65f46ca4
-    max_tries: 3
-    time_limit: 60
-    auto_train: false
-    run_as_tool: false
-    rag_url: https://rag.staging.studio.lyzr.ai
 tools: []
 tool_configs: []
 managed_agents:
