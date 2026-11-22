@@ -25,19 +25,28 @@ features:
     run_as_tool: false
     rag_url: https://rag.staging.studio.lyzr.ai
 tools:
-- github
+- youtube-Bikash
 tool_configs:
-- tool_name: github
+- tool_name: youtube-Bikash
   tool_source: composio
   action_names:
-  - GITHUB_CREATE_A_COMMIT_COMMENT
-  - GITHUB_CREATE_A_COMMIT_STATUS
-  - GITHUB_GET_A_COMMIT
-  - GITHUB_LIST_COMMITS
-  - GITHUB_LIST_COMMIT_COMMENTS
+  - YOUTUBE_GET_CHANNEL_ACTIVITIES
+  - YOUTUBE_GET_CHANNEL_ID_BY_HANDLE
+  - YOUTUBE_GET_CHANNEL_STATISTICS
+  - YOUTUBE_LIST_CAPTION_TRACK
+  - YOUTUBE_LIST_CHANNEL_VIDEOS
+  - YOUTUBE_LIST_USER_PLAYLISTS
+  - YOUTUBE_LIST_USER_SUBSCRIPTIONS
+  - YOUTUBE_LOAD_CAPTIONS
+  - YOUTUBE_SEARCH_YOU_TUBE
+  - YOUTUBE_SUBSCRIBE_CHANNEL
+  - YOUTUBE_UPDATE_THUMBNAIL
+  - YOUTUBE_UPDATE_VIDEO
+  - YOUTUBE_UPLOAD_VIDEO
+  - YOUTUBE_VIDEO_DETAILS
   server_id: ''
-  provider_uuid: 6979cdc148b4a6ba95dea644
-  credential_id: ''
+  provider_uuid: 6979cdc148b4a6ba95dea64c
+  credential_id: 1b9885ce-e08b-4683-bf00-bb40e73c6ca6
   persist_auth: true
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
@@ -46,9 +55,13 @@ managed_agents:
 response_format:
   type: text
 max_iterations: 25
-tool_usage_description: "{\n  \"github\": [\n    \"GITHUB_CREATE_A_COMMIT_COMMENT\"\
-  ,\n    \"GITHUB_CREATE_A_COMMIT_STATUS\",\n    \"GITHUB_GET_A_COMMIT\",\n    \"\
-  GITHUB_LIST_COMMITS\",\n    \"GITHUB_LIST_COMMIT_COMMENTS\"\n  ]\n}"
+tool_usage_description: "{\n  \"youtube-Bikash\": [\n    \"YOUTUBE_GET_CHANNEL_ACTIVITIES\"\
+  ,\n    \"YOUTUBE_GET_CHANNEL_ID_BY_HANDLE\",\n    \"YOUTUBE_GET_CHANNEL_STATISTICS\"\
+  ,\n    \"YOUTUBE_LIST_CAPTION_TRACK\",\n    \"YOUTUBE_LIST_CHANNEL_VIDEOS\",\n \
+  \   \"YOUTUBE_LIST_USER_PLAYLISTS\",\n    \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n\
+  \    \"YOUTUBE_LOAD_CAPTIONS\",\n    \"YOUTUBE_SEARCH_YOU_TUBE\",\n    \"YOUTUBE_SUBSCRIBE_CHANNEL\"\
+  ,\n    \"YOUTUBE_UPDATE_THUMBNAIL\",\n    \"YOUTUBE_UPDATE_VIDEO\",\n    \"YOUTUBE_UPLOAD_VIDEO\"\
+  ,\n    \"YOUTUBE_VIDEO_DETAILS\"\n  ]\n}"
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
