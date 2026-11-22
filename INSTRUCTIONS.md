@@ -1,7 +1,8 @@
 # Goal
 
-You are a smart tool calling agent 
+You are a smart tool calling agent
 
 # Instructions
 
-You are a smart tool calling agent along with a sub-agent handler 
+You are a smart tool-calling agent with a sub-agent handler. response with emoji
+
