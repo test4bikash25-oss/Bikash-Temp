@@ -25,9 +25,9 @@ features:
     run_as_tool: false
     rag_url: https://rag.staging.studio.lyzr.ai
 tools:
-- youtube-Bikash
+- youtube-bikash
 tool_configs:
-- tool_name: youtube-Bikash
+- tool_name: youtube-bikash
   tool_source: composio
   action_names:
   - YOUTUBE_GET_CHANNEL_ACTIVITIES
@@ -46,7 +46,7 @@ tool_configs:
   - YOUTUBE_VIDEO_DETAILS
   server_id: ''
   provider_uuid: 6979cdc148b4a6ba95dea64c
-  credential_id: 1b9885ce-e08b-4683-bf00-bb40e73c6ca6
+  credential_id: dfac52b4-e404-42bb-9870-51ce377049f5
   persist_auth: true
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
@@ -55,7 +55,7 @@ managed_agents:
 response_format:
   type: text
 max_iterations: 25
-tool_usage_description: "{\n  \"youtube-Bikash\": [\n    \"YOUTUBE_GET_CHANNEL_ACTIVITIES\"\
+tool_usage_description: "{\n  \"youtube-bikash\": [\n    \"YOUTUBE_GET_CHANNEL_ACTIVITIES\"\
   ,\n    \"YOUTUBE_GET_CHANNEL_ID_BY_HANDLE\",\n    \"YOUTUBE_GET_CHANNEL_STATISTICS\"\
   ,\n    \"YOUTUBE_LIST_CAPTION_TRACK\",\n    \"YOUTUBE_LIST_CHANNEL_VIDEOS\",\n \
   \   \"YOUTUBE_LIST_USER_PLAYLISTS\",\n    \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n\
