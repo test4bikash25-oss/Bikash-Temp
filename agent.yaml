@@ -15,39 +15,8 @@ features:
     max_messages_context_count: 10
     memory_credential_id: 5356d0c3-2547-4a24-9036-55db00b6033d
     memory_id: ''
-- type: DATA_QUERY
-  priority: 0
-  config:
-    docs_rag_id: 6b02d1626d14d7fb65f46ca4
-    max_tries: 3
-    time_limit: 60
-    auto_train: false
-    run_as_tool: false
-    rag_url: https://rag.staging.studio.lyzr.ai
-tools:
-- youtube-bikash
-tool_configs:
-- tool_name: youtube-bikash
-  tool_source: composio
-  action_names:
-  - YOUTUBE_GET_CHANNEL_ACTIVITIES
-  - YOUTUBE_GET_CHANNEL_ID_BY_HANDLE
-  - YOUTUBE_GET_CHANNEL_STATISTICS
-  - YOUTUBE_LIST_CAPTION_TRACK
-  - YOUTUBE_LIST_CHANNEL_VIDEOS
-  - YOUTUBE_LIST_USER_PLAYLISTS
-  - YOUTUBE_LIST_USER_SUBSCRIPTIONS
-  - YOUTUBE_LOAD_CAPTIONS
-  - YOUTUBE_SEARCH_YOU_TUBE
-  - YOUTUBE_SUBSCRIBE_CHANNEL
-  - YOUTUBE_UPDATE_THUMBNAIL
-  - YOUTUBE_UPDATE_VIDEO
-  - YOUTUBE_UPLOAD_VIDEO
-  - YOUTUBE_VIDEO_DETAILS
-  server_id: ''
-  provider_uuid: 6979cdc148b4a6ba95dea64c
-  credential_id: dfac52b4-e404-42bb-9870-51ce377049f5
-  persist_auth: true
+tools: []
+tool_configs: []
 managed_agents:
 - id: 6afc33ba86fd9317e3884359
   name: 'Tweet Agent '
@@ -55,13 +24,7 @@ managed_agents:
 response_format:
   type: text
 max_iterations: 25
-tool_usage_description: "{\n  \"youtube-bikash\": [\n    \"YOUTUBE_GET_CHANNEL_ACTIVITIES\"\
-  ,\n    \"YOUTUBE_GET_CHANNEL_ID_BY_HANDLE\",\n    \"YOUTUBE_GET_CHANNEL_STATISTICS\"\
-  ,\n    \"YOUTUBE_LIST_CAPTION_TRACK\",\n    \"YOUTUBE_LIST_CHANNEL_VIDEOS\",\n \
-  \   \"YOUTUBE_LIST_USER_PLAYLISTS\",\n    \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n\
-  \    \"YOUTUBE_LOAD_CAPTIONS\",\n    \"YOUTUBE_SEARCH_YOU_TUBE\",\n    \"YOUTUBE_SUBSCRIBE_CHANNEL\"\
-  ,\n    \"YOUTUBE_UPDATE_THUMBNAIL\",\n    \"YOUTUBE_UPDATE_VIDEO\",\n    \"YOUTUBE_UPLOAD_VIDEO\"\
-  ,\n    \"YOUTUBE_VIDEO_DETAILS\"\n  ]\n}"
+tool_usage_description: '{}'
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
