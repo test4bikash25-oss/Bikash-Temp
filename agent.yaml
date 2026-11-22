@@ -27,9 +27,9 @@ features:
 tools:
 - instagram-Bikash
 - youtube-Bikash
-- Notion
 - ARXIV-Bikash
 - openapi-todo_task-getTodos
+- Notion_custom
 tool_configs:
 - tool_name: instagram-Bikash
   tool_source: composio
@@ -95,7 +95,27 @@ tool_configs:
   provider_uuid: 6979cdc148b4a6ba95dea64c
   credential_id: 1b9885ce-e08b-4683-bf00-bb40e73c6ca6
   persist_auth: true
-- tool_name: Notion
+- tool_name: ARXIV-Bikash
+  tool_source: aci
+  action_names:
+  - ARXIV__SEARCH_PAPERS
+  - ARXIV__GET_PAPER_METADATA
+  - ARXIV__DOWNLOAD_PAPER
+  - ARXIV__GET_CATEGORIES
+  - ARXIV__GET_DAILY_UPDATES
+  server_id: ''
+  provider_uuid: 695e5269ab10296d9a5bc549
+  credential_id: 722886e6-2a8d-4f94-9fe8-a49e55babf96
+  persist_auth: true
+- tool_name: openapi-todo_task-getTodos
+  tool_source: openapi
+  action_names:
+  - Get all todo task
+  server_id: ''
+  provider_uuid: ''
+  credential_id: ''
+  persist_auth: true
+- tool_name: Notion_custom
   tool_source: mcp
   action_names:
   - notion-search
@@ -175,27 +195,7 @@ tool_configs:
   - notion-convert-to-meetings-database
   - notion-create-meeting-note
   - notion-get-setup-guide
-  server_id: 6b02f6e656a0dca1e1a954f7
-  provider_uuid: ''
-  credential_id: ''
-  persist_auth: true
-- tool_name: ARXIV-Bikash
-  tool_source: aci
-  action_names:
-  - ARXIV__SEARCH_PAPERS
-  - ARXIV__GET_PAPER_METADATA
-  - ARXIV__DOWNLOAD_PAPER
-  - ARXIV__GET_CATEGORIES
-  - ARXIV__GET_DAILY_UPDATES
-  server_id: ''
-  provider_uuid: 695e5269ab10296d9a5bc549
-  credential_id: 722886e6-2a8d-4f94-9fe8-a49e55babf96
-  persist_auth: true
-- tool_name: openapi-todo_task-getTodos
-  tool_source: openapi
-  action_names:
-  - Get all todo task
-  server_id: ''
+  server_id: 6b0304f956a0dca1e1a954f8
   provider_uuid: ''
   credential_id: ''
   persist_auth: true
@@ -230,7 +230,10 @@ tool_usage_description: "{\n  \"instagram-Bikash\": [\n    \"INSTAGRAM_CREATE_CA
   \  \"YOUTUBE_LIST_USER_SUBSCRIPTIONS\",\n    \"YOUTUBE_LOAD_CAPTIONS\",\n    \"\
   YOUTUBE_SEARCH_YOU_TUBE\",\n    \"YOUTUBE_SUBSCRIBE_CHANNEL\",\n    \"YOUTUBE_UPDATE_THUMBNAIL\"\
   ,\n    \"YOUTUBE_UPDATE_VIDEO\",\n    \"YOUTUBE_UPLOAD_VIDEO\",\n    \"YOUTUBE_VIDEO_DETAILS\"\
-  \n  ],\n  \"Notion\": [\n    \"notion-search\",\n    \"notion-memory-search\",\n\
+  \n  ],\n  \"ARXIV-Bikash\": [\n    \"ARXIV__SEARCH_PAPERS\",\n    \"ARXIV__GET_PAPER_METADATA\"\
+  ,\n    \"ARXIV__DOWNLOAD_PAPER\",\n    \"ARXIV__GET_CATEGORIES\",\n    \"ARXIV__GET_DAILY_UPDATES\"\
+  \n  ],\n  \"openapi-todo_task-getTodos\": [\n    \"Get all todo task\"\n  ],\n \
+  \ \"Notion_custom\": [\n    \"notion-search\",\n    \"notion-memory-search\",\n\
   \    \"notion-get-tool-access\",\n    \"notion-fetch\",\n    \"notion-create-attachment\"\
   ,\n    \"notion-create-file-upload\",\n    \"notion-download-attachment\",\n   \
   \ \"notion-get-file-download-urls\",\n    \"notion-create-pages\",\n    \"notion-update-page\"\
@@ -260,10 +263,7 @@ tool_usage_description: "{\n  \"instagram-Bikash\": [\n    \"INSTAGRAM_CREATE_CA
   ,\n    \"notion-calendar-update-events\",\n    \"notion-calendar-cancel-events\"\
   ,\n    \"notion-get-self\",\n    \"notion-link-meeting-note-to-calendar-event\"\
   ,\n    \"notion-convert-to-meetings-database\",\n    \"notion-create-meeting-note\"\
-  ,\n    \"notion-get-setup-guide\"\n  ],\n  \"ARXIV-Bikash\": [\n    \"ARXIV__SEARCH_PAPERS\"\
-  ,\n    \"ARXIV__GET_PAPER_METADATA\",\n    \"ARXIV__DOWNLOAD_PAPER\",\n    \"ARXIV__GET_CATEGORIES\"\
-  ,\n    \"ARXIV__GET_DAILY_UPDATES\"\n  ],\n  \"openapi-todo_task-getTodos\": [\n\
-  \    \"Get all todo task\"\n  ]\n}"
+  ,\n    \"notion-get-setup-guide\"\n  ]\n}"
 llm_credential_id: lyzr_openai
 additional_model_params: null
 store_messages: true
